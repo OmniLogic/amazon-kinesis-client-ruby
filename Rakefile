@@ -14,4 +14,5 @@ task :download_jars do
   mvn.exec 'generate-sources', '-f', 'pom.xml'
 end
 
-task build: :download_jars
+#Do not run the task, since custom jars were already added to the project jars folder.
+#task build: :download_jars
