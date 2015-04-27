@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'kcl/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'amazon-kinesis-client-ruby'
+  spec.name          = 'omnilogic-kinesis-client-ruby'
   spec.version       = Kcl::VERSION
   spec.authors       = ['Soloman Weng']
   spec.email         = ['solomanw@everydayhero.com.au']
