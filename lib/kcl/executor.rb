@@ -59,7 +59,7 @@ module Kcl
       ).build
       LOG.info "execute command:\n#{command.join ' '}"
 
-      system(*command)
+      system(command.join(' '))
     end
 
     def run_record_processor

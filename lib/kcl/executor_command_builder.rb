@@ -9,14 +9,18 @@ module Kcl
 
     def build
       [
-        java, system_property_options, '-cp', class_path,
-        client_class, properties_file
+        java, system_property_options, '-cp', class_path, 
+        enable_java_debug, client_class, properties_file
       ].flatten
     end
-
+       
     private
 
     attr_reader :properties_file_path, :extra_class_path, :system_properties
+
+    def enable_java_debug
+      "-Xdebug -Xrunjdwp:transport=dt_socket,server=n,suspend=n,address=8000"
+    end
 
     def java
       command = ENV.fetch('PATH_TO_JAVA', `which java`).strip
@@ -24,7 +28,7 @@ module Kcl
 
       command
     end
-
+ 
     def client_class
       'com.amazonaws.services.kinesis.multilang.MultiLangDaemon'
     end
