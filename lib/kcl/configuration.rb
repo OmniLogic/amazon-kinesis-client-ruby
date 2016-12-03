@@ -1,5 +1,6 @@
 require 'ostruct'
 require 'active_support/core_ext/string'
+require 'pry-nav'
 
 module Kcl
   class Configuration < OpenStruct
@@ -48,6 +49,7 @@ module Kcl
         executable_name: executable_name,
         application_name: application_name,
         processing_language: processing_language,
+        consumer_group: "$Default",
         aws_credentials_provider: 'DefaultAWSCredentialsProviderChain',
         initial_position_in_stream: 'TRIM_HORIZON'
       }
