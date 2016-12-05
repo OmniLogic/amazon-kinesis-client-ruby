@@ -1,6 +1,5 @@
 require 'ostruct'
 require 'active_support/core_ext/string'
-require 'pry-nav'
 
 module Kcl
   class Configuration < OpenStruct
