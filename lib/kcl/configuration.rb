@@ -55,7 +55,7 @@ module Kcl
     end
 
     def required_propertie_keys
-      default_config.keys.concat [ :stream_name, :namespace_name, :sas_key_name, :sas_key_value, :consumer_group_name ]
+      default_config.keys.concat [ :queue_name, :namespace_name, :sas_key_name, :sas_key_value ]
     end
 
     def default_key_map

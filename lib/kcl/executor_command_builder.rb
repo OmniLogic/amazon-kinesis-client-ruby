@@ -19,7 +19,7 @@ module Kcl
     attr_reader :properties_file_path, :extra_class_path, :system_properties
 
     def enable_java_debug
-       #"-Xdebug -Xrunjdwp:transport=dt_socket,server=n,suspend=n,address=8000"
+      # "-Xdebug -Xrunjdwp:transport=dt_socket,server=n,suspend=n,address=8000"
     end
 
     def java
@@ -30,7 +30,7 @@ module Kcl
     end
  
     def client_class
-    'br.com.omnilogic.messagingapi.eventhub.multilang.MultiLangDaemon'
+    'br.com.omnilogic.messagingapi.servicebus.multilang.MultiLangDaemon'
     end
 
     def class_path
