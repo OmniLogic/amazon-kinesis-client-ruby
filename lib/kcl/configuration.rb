@@ -48,13 +48,14 @@ module Kcl
         executable_name: executable_name,
         application_name: application_name,
         processing_language: processing_language,
+        consumer_group: "$Default",
         aws_credentials_provider: 'DefaultAWSCredentialsProviderChain',
         initial_position_in_stream: 'TRIM_HORIZON'
       }
     end
 
     def required_propertie_keys
-      default_config.keys.concat [:stream_name]
+      default_config.keys.concat [ :queue_name, :namespace_name, :sas_key_name, :sas_key_value ]
     end
 
     def default_key_map
